@@ -1,0 +1,16 @@
+com\hbt\semillero\servicios\rest\ConsultasRest.class
+com\hbt\semillero\entidades\Linea.class
+com\hbt\semillero\entidades\Vehiculo.class
+com\hbt\semillero\entidades\Compra.class
+com\hbt\semillero\dto\MarcaDTO.class
+com\hbt\semillero\dto\PersonaDTO.class
+com\hbt\semillero\entidades\Marca.class
+com\hbt\semillero\common\JaxRSActivator.class
+com\hbt\semillero\entidades\Comprador.class
+com\hbt\semillero\servicios\ejb\ConsultasEJB.class
+com\hbt\semillero\servicios\interfaces\IConsultasEjbLocal.class
+com\hbt\semillero\dto\ResultadoDTO.class
+com\hbt\semillero\entidades\Vendedor.class
+com\hbt\semillero\servicios\rest\config\CORSFilter.class
+com\hbt\semillero\dto\LineaDTO.class
+com\hbt\semillero\entidades\Persona.class
