@@ -14,12 +14,13 @@ import com.hbt.semillero.dto.LineaDTO;
 import com.hbt.semillero.dto.MarcaDTO;
 import com.hbt.semillero.dto.PersonaDTO;
 import com.hbt.semillero.dto.ResultadoDTO;
+import com.hbt.semillero.dto.VehiculoDTO;
 import com.hbt.semillero.servicios.interfaces.IConsultasEjbLocal;
 
 /**
  * Componente que expone servicios rest.
  * 
- * @author Johnny Soto
+ * @author Gustavo Gaviria
  *
  */
 @Path("/ConsultasRest")
@@ -50,6 +51,26 @@ public class ConsultasRest {
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<LineaDTO> consultarLineasPorMarca(@QueryParam("idMarca") Long idMarca) {
 		return consultaEJB.consultarLineasPorMarca(idMarca);
+	}
+	
+	/*
+	 * Consulta todos los vehiculos aplicando el filtro de la marca
+	 */
+	@GET
+	@Path("/consultarVehiculosPorMarca")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<VehiculoDTO> consultarVehiculosPorMarca(@QueryParam("idMarca") Long idMarca){
+		return consultaEJB.consultarVehiculosPorMarca(idMarca);
+	}
+	
+	/*
+	 * Consulta todos los vehiculos aplicando el filtro de la linea
+	 */
+	@GET
+	@Path("/consultarVehiculosPorLinea")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<VehiculoDTO> consultarVehiculosPorLinea(@QueryParam("idLinea") Long idLinea){
+		return consultaEJB.consultarVehiculosPorMarca(idLinea);
 	}
 
 	/**

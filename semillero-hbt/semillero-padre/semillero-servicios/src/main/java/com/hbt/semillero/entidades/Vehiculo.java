@@ -34,6 +34,11 @@ public class Vehiculo {
 	@JoinColumn(name = "LINEA")
 	private Linea linea;
 
+	
+	public Long getIdVehiculo() {
+		return idVehiculo;
+	}
+
 	public int getModelo() {
 		return modelo;
 	}

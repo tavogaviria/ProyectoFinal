@@ -40,4 +40,20 @@ export class ConsultaVehiculosService extends AbstractService {
 	      });
   }
 
+  //** nos permite hacer la consulta de los vehiculos que pertenecen a una linea */
+  public consultarVehiculosPorLinea(linea: string) : Observable<VehiculoDTO> { 
+	  return this.get<VehiculoDTO>("/semillero-servicios", "/ConsultasRest/consultarVehiculoPorLinea",
+	      {
+	        "linea":linea
+	      });
+  }
+
+  //** nos permite hacer la consulta de los vehiculos que pertenecen a una marca */
+  public consultarVehiculosPorMarca(marca: string) : Observable<VehiculoDTO> { 
+	  return this.get<VehiculoDTO>("/semillero-servicios", "/ConsultasRest/consultarVehiculoPorMarca",
+	      {
+	        "marca":marca
+	      });
+  }
+
 }

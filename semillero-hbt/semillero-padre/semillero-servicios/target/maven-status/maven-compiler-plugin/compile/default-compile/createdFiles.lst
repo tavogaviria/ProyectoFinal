@@ -14,3 +14,4 @@ com\hbt\semillero\entidades\Vendedor.class
 com\hbt\semillero\servicios\rest\config\CORSFilter.class
 com\hbt\semillero\dto\LineaDTO.class
 com\hbt\semillero\entidades\Persona.class
+com\hbt\semillero\dto\VehiculoDTO.class

@@ -12,4 +12,8 @@
 	<h2>Llamado servicios</h2>
 	<input value="Consultar personas" type="submit" (click)="consultarPersonas()" />
 	<pre>{{ listaPersonasDTO | json }}</pre>
+	<br>
+	<input value="Consultar vehiculos" type="submit" (click)="listarVehiculos()" />
+	<pre>{{ listarVehiculos | json }}</pre>
+
 </form>

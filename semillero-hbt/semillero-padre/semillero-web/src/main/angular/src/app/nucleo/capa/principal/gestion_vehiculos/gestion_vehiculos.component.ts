@@ -11,7 +11,7 @@ export class GestionVehiculosComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  	this.vehiculo = { marca: 'Mazda', placa: '123ABC', linea: '', modelo:'', color:''   };
+  	this.vehiculo = { marca: 'Renault', placa: 'CSA837', linea: '', modelo:'', color:''   };
   }
 
 }

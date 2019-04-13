@@ -507,7 +507,7 @@ var GestionVehiculosComponent = /** @class */ (function () {
     function GestionVehiculosComponent() {
     }
     GestionVehiculosComponent.prototype.ngOnInit = function () {
-        this.vehiculo = { marca: 'Mazda', placa: '123ABC', linea: '', modelo: '', color: '' };
+        this.vehiculo = { marca: 'Renault', placa: 'CSA837', linea: '', modelo: '', color: '' };
     };
     GestionVehiculosComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -530,7 +530,7 @@ var GestionVehiculosComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form>\r\n\t<h2>\r\n\t  {{ marca }}\r\n\t</h2>\r\n\t<h3> Componente hijo / Presentacion</h3>\r\n\t<div class=\"card\">\r\n\t  <div class=\"section\">\r\n\t    {{ placa }}\r\n\t  </div>\r\n\t</div>\r\n\t\r\n\t<h2>Llamado servicios</h2>\r\n\t<input value=\"Consultar personas\" type=\"submit\" (click)=\"consultarPersonas()\" />\r\n\t<pre>{{ listaPersonasDTO | json }}</pre>\r\n</form>"
+module.exports = "<form>\r\n\t<h2>\r\n\t  {{ marca }}\r\n\t</h2>\r\n\t<h3> Componente hijo / Presentacion</h3>\r\n\t<div class=\"card\">\r\n\t  <div class=\"section\">\r\n\t    {{ placa }}\r\n\t  </div>\r\n\t</div>\r\n\t\r\n\t<h2>Llamado servicios</h2>\r\n\t<input value=\"Consultar personas\" type=\"submit\" (click)=\"consultarPersonas()\" />\r\n\t<pre>{{ listaPersonasDTO | json }}</pre>\r\n\t<input value=\"Consultar vehiculos\" type=\"submit\" (click)=\"listarVehiculos()\" />\r\n\t<pre>{{ listarVehiculos | json }}</pre>\r\n\r\n</form>"
 
 /***/ }),
 
@@ -750,6 +750,18 @@ var ConsultaVehiculosService = /** @class */ (function (_super) {
             "placa": placa
         });
     };
+    //** nos permite hacer la consulta de los vehiculos que pertenecen a una linea */
+    ConsultaVehiculosService.prototype.consultarVehiculosPorLinea = function (linea) {
+        return this.get("/semillero-servicios", "/ConsultasRest/consultarVehiculoPorLinea", {
+            "linea": linea
+        });
+    };
+    //** nos permite hacer la consulta de los vehiculos que pertenecen a una marca */
+    ConsultaVehiculosService.prototype.consultarVehiculosPorMarca = function (marca) {
+        return this.get("/semillero-servicios", "/ConsultasRest/consultarVehiculoPorMarca", {
+            "marca": marca
+        });
+    };
     ConsultaVehiculosService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
@@ -927,7 +939,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\USUARIO\Desktop\Otro Repo\semilleroHBT\ambiente\semillero-hbt\semillero-padre\semillero-web\src\main\angular\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\USUARIO\Desktop\Otro Repo\semilleroHBT\ambiente\ProyectoFinal\semillero-hbt\semillero-padre\semillero-web\src\main\angular\src\main.ts */"./src/main.ts");
 
 
 /***/ })
